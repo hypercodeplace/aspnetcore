@@ -158,7 +158,7 @@ namespace Microsoft.AspNetCore.Components.WebAssembly.Authentication
                 result.RedirectUrl = redirectUrl.ToString();
             }
 
-            return new AccessTokenResult(parsedStatus, result.Token, result.RedirectUrl);
+            return new AccessTokenResult(parsedStatus, result.Token, Navigation, result.RedirectUrl);
         }
 
         /// <inheritdoc />
@@ -183,7 +183,7 @@ namespace Microsoft.AspNetCore.Components.WebAssembly.Authentication
                 result.RedirectUrl = redirectUrl.ToString();
             }
 
-            return new AccessTokenResult(parsedStatus, result.Token, result.RedirectUrl);
+            return new AccessTokenResult(parsedStatus, result.Token, Navigation, result.RedirectUrl);
         }
 
         private Uri GetRedirectUrl(string customReturnUrl)
